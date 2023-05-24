@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+} 
+
+body{
+    background-color: #dfebee;
+}
+
+.logo{
+    width: 10%;
+    display: flex;
+    justify-content: left;
+}
+.logo img{
+    width: 100%;
+    height: 15%;
+}
+
+
+.nav-bar{
+    background: url("../img/pedra_furada_cut2.0.png") no-repeat top center; 
+    background-size: cover;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    padding: 0rem 0rem; /*em cima e embaixo, esquerda e direita*/
+    justify-content: space-around;
+}
+.nav-item {
+    margin: 0 1rem;
+    list-style: none;
+}
+.nav-link{
+    text-shadow: #000 1px 2px 2px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 5%;
+    transition: 0.5s;
+    font-family: 'Rubik', sans-serif;
+}
+.nav-link:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.nav-menu ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.mobile_menu{
+    cursor: pointer;
+    display: none;
+}
+.mobile_menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+
+}
+
+@media (max-width: 768px) {
+    .mobile_menu{
+        display: block;
+    }
+    .mobile_menu.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .mobile_menu.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .mobile_menu.active .bar:nth-child(3){
+        opacity: 0;
+    }
+    .mobile_menu.active .bar:nth-child(4){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 5%;
+        border-radius: 0 0 20px 20px;
+        background-color:#2a92d3;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.5s;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+}
+
+.bandeiras{
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+    position: relative;
+}
+.bandeiras ul{
+    border-radius: 4px;
+    background-color: #dfebee;
+    list-style: none;
+    border: 1px solid #f8f8f8;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: none;
+    position: absolute;
+    
+}
+.bandeiras:hover ul{
+    display: block;
+
+}
+
+.selecionada{
+    line-height: 1.5;
+    cursor: pointer;
+    display: flex;
+    color: #f2f2f2;
+    font-weight: bold;
+}
+.linguas a{
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+.linguas a:hover{
+    background-color: #f2f2f2;
+}
+
+
+.little_band{
+    width: 35px;
+    height: 25px;
+}
+.little_band img{
+    width: 100%;
+    height: 100%;
+}
+.little_band2{
+    width: 35px;
+    height: 25px;
+}
+.little_band2 img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*  BODY  */
+
+.conteiner_inicio{
+    background-color: #dfebee;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+}
+
+.quadros{
+    width: 100%;
+    height: 100%;
+}
+
+.lado_direito{
+    width: 45%;
+    display: flex;
+}
+.txt_inicio{
+    width: 100%;
+}
+.txt_inicio h1{
+    text-shadow: #000 2px 3px 2px;
+    font-family: 'Tilt Neon', cursive;
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 2%;
+}
+.txt_inicio p{
+    text-shadow: #000 1px 3px 2px;
+    font-family: 'Tilt Neon', cursive;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+.lado_esquerdo{
+    padding-top: 10%;
+    width: 45%;
+}
+.card {
+    width: 250px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 2% 35%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-size: cover;
+}
+.card h5{
+    text-shadow: #000 1px 1px 2px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Tilt Neon', cursive;
+}
+.card1{
+    background-image: url(../img/foto3.jpg);
+}
+.card2{
+    background-image: url(../img/foto8.jpg);
+}
+.card3{
+    background-image: url(../img/big_duna.jpg);
+}
+.card4{
+    background-image: url(../img/buraco-azul.jpg.webp);
+}
+
+.txt_entrada{
+    margin-top: 5%;
+    display: block;
+}
+.title{
+    margin-left: 22%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    color:#fff;
+    text-shadow: black 1px 1px 2px;
+    background-color: #4598DE;
+    border-radius: 5px;
+    width: 55%;
+    height: 8%;
+}
+.text{
+    padding-inline: 8%;
+    margin-bottom: 2% ;
+    text-align: justify;
+}
+.text_embaixo_foto{
+    margin-top: 3%;
+    padding-inline: 8%;
+    margin-bottom: 2% ;
+    text-align: justify;
+}
+.title2{
+    margin-bottom: 2%;
+    color:rgb(0, 0, 0);
+    text-shadow: #4598DE 2px 2px 2px;
+    border-radius: 5px;
+}
+
+.imag{
+    margin-left: 22%;
+    width: 55%;
+    height: 35%;
+    justify-content: center;
+}
+.imag img{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.imag-oq{
+    margin-left: 36%;
+    width: 30%;
+    height: 15%;
+    justify-content: center;
+}
+.imag-oq img{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.imag-duo{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.duo{
+    width: 43%;
+    height: 43%;
+}
+.duo img{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+}
+#duo{
+    width: 34%;
+    height: 38%;
+}
+#duo img{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+}
+
+.content{
+    margin-top: 3%;
+    display: flex;
+    margin-inline: 8%;
+}
+.lugar{
+    width: 11%;
+    height: 11%;
+}
+.lugar img{
+    width: 100%;
+    height: 100%;
+}
+.lugar2{
+    width: 15%;
+    height: 15%;
+}
+.lugar2 img{
+    width: 100%;
+    height: 100%;
+}
+.lugar3{
+    width: 25%;
+    height: 25%;
+}
+.lugar3 img{
+    width: 100%;
+    height: 100%;
+}
+.lugar4{
+    width: 15%;
+    height: 15%;
+}
+.lugar4 img{
+    width: 100%;
+    height: 100%;
+}
+.text-lugar{
+    padding-inline: 3%;
+    margin-bottom: 2% ;
+    text-align: justify;
+}
+.hiperlink{
+    font-weight: 600;
+    margin-top: 2%;
+}
+.foto-do-lugar{
+    width: 30%;
+    height:10%;
+}
+.foto-do-lugar img{
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+}
+.foto-do-lugar2{
+    width: 30%;
+    height:10%;
+}
+.foto-do-lugar2 img{
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+}
+
+.trio{
+    display: flex;
+    padding-inline: 8%;
+    margin-left: 4%;
+    gap: 4%;
+}
+
+.conteiner2{
+    display: block;
+}
+.dica{
+    margin-top: 5%;
+    margin-bottom: 3%;
+    padding: 1.5%;
+    border-color: #4598DE;
+    background-color:#74b6ec;
+    border-radius: 5px;
+    width: 60%;
+    height: 35%;
+    text-align: justify;
+    margin-left: 20%;
+}
